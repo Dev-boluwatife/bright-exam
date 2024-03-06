@@ -92,7 +92,7 @@ export default function CreatePost() {
             placeholder='Title'
             required
             id='title'
-            className='flex-1'
+            className='flex-1 text-white text-opacity-40'
             onChange={(e) =>
               setFormData({ ...formData, title: e.target.value })
             }
@@ -101,11 +101,14 @@ export default function CreatePost() {
             onChange={(e) =>
               setFormData({ ...formData, category: e.target.value })
             }
+            className='text-white text-opacity-40'
           >
             <option value='uncategorized'>Select a category</option>
-            <option value='javascript'>JavaScript</option>
-            <option value='reactjs'>React.js</option>
-            <option value='nextjs'>Next.js</option>
+            <option value='waec'>WAEC</option>
+            <option value='neco'>NECO</option>
+            <option value='nabteb'>NABTEB</option>
+            <option value='gce'>GCE</option>
+            <option value='jupeb'>JUPEB</option>
           </Select>
         </div>
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
@@ -145,7 +148,7 @@ export default function CreatePost() {
         <ReactQuill
           theme='snow'
           placeholder='Write something...'
-          className='h-72 mb-12'
+          className='h-72 mb-12 text-white text-opacity-40'
           required
           onChange={(value) => {
             setFormData({ ...formData, content: value });
